@@ -1,6 +1,6 @@
 name: flutter_tts_improved
 description: A fork of the Flutter_TTS plugin, that uses the progress reporters of the Utterance APIs, on both Android and iOS.
-version: 1.0.2
+version: 1.0.3
 author: Loushou <life.42@gmail.com>
 homepage: https://github.com/loushou/flutter_tts_improved
 

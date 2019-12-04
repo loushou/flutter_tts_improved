@@ -1,3 +1,7 @@
+## 1.0.3
+
+* Formatted code according to dart pub specs
+
 ## 1.0.2
 
 * Fully tested on multiple iOS and Android devices and emulators

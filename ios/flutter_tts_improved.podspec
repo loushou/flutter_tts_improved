@@ -3,7 +3,7 @@
 #
 Pod::Spec.new do |s|
   s.name             = 'flutter_tts_improved'
-  s.version          = '1.0.2'
+  s.version          = '1.0.3'
   s.summary          = 'A fork of the Flutter_TTS plugin, that uses the progress reporters of the Utterance APIs, on both Android and iOS.'
   s.description      = <<-DESC
 A fork of the Flutter_TTS plugin, that uses the progress reporters of the Utterance APIs, on both Android and iOS.
