@@ -28,6 +28,9 @@ class _MyAppState extends State<MyApp> {
     // setState to update our non-existent appearance.
     if (!mounted) return;
 
+    print('VOICES: ${await tts.getVoices}');
+    print('LANGUAGES: ${await tts.getLanguages}');
+
     tts.setProgressHandler((String words, int start, int end, String word) {
       setState(() {
         _platformVersion = word;
