@@ -4,7 +4,8 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 typedef ErrorHandler = void Function(dynamic message);
-typedef FlutterTTSImprovedProgressHandler = void Function(String, int, int, String);
+typedef FlutterTTSImprovedProgressHandler = void Function(
+    String, int, int, String);
 
 // Provides Platform specific TTS services (Android: TextToSpeech, IOS: AVSpeechSynthesizer)
 class FlutterTtsImproved {
@@ -21,26 +22,32 @@ class FlutterTtsImproved {
   ErrorHandler errorHandler;
 
   /// [Future] which invokes the platform specific method for speaking
-  Future<dynamic> speak(String text) => _channel.invokeMethod<dynamic>('speak', text);
+  Future<dynamic> speak(String text) =>
+      _channel.invokeMethod<dynamic>('speak', text);
 
   /// [Future] which invokes the platform specific method for setLanguage
-  Future<dynamic> setLanguage(String language) => _channel.invokeMethod<dynamic>('setLanguage', language);
+  Future<dynamic> setLanguage(String language) =>
+      _channel.invokeMethod<dynamic>('setLanguage', language);
 
   /// [Future] which invokes the platform specific method for setSpeechRate
   /// Allowed values are in the range from 0.0 (silent) to 1.0 (loudest)
-  Future<dynamic> setSpeechRate(double rate) => _channel.invokeMethod<dynamic>('setSpeechRate', rate);
+  Future<dynamic> setSpeechRate(double rate) =>
+      _channel.invokeMethod<dynamic>('setSpeechRate', rate);
 
   /// [Future] which invokes the platform specific method for setVolume
   /// Allowed values are in the range from 0.0 (silent) to 1.0 (loudest)
-  Future<dynamic> setVolume(double volume) => _channel.invokeMethod<dynamic>('setVolume', volume);
+  Future<dynamic> setVolume(double volume) =>
+      _channel.invokeMethod<dynamic>('setVolume', volume);
 
   /// [Future] which invokes the platform specific method for setPitch
   /// 1.0 is default and ranges from .5 to 2.0
-  Future<dynamic> setPitch(double pitch) => _channel.invokeMethod<dynamic>('setPitch', pitch);
+  Future<dynamic> setPitch(double pitch) =>
+      _channel.invokeMethod<dynamic>('setPitch', pitch);
 
   /// [Future] which invokes the platform specific method for setVoice
   /// ***Android supported only***
-  Future<dynamic> setVoice(String voice) => _channel.invokeMethod<dynamic>('setVoice', voice);
+  Future<dynamic> setVoice(String voice) =>
+      _channel.invokeMethod<dynamic>('setVoice', voice);
 
   /// [Future] which invokes the platform specific method for stop
   Future<dynamic> stop() => _channel.invokeMethod<dynamic>('stop');
@@ -49,7 +56,8 @@ class FlutterTtsImproved {
   /// Android issues with API 21 & 22
   /// Returns a list of available languages
   Future<List<String>> get getLanguages async {
-    final List<String> languages = List<String>.from(await _channel.invokeMethod<dynamic>('getLanguages'));
+    final List<String> languages =
+        List<String>.from(await _channel.invokeMethod<dynamic>('getLanguages'));
     return languages;
   }
 
@@ -57,17 +65,21 @@ class FlutterTtsImproved {
   /// ***Android supported only ***
   /// Returns a `List` of voice names
   Future<dynamic> get getVoices async {
-    final List<String> voices = List<String>.from(await _channel.invokeMethod<dynamic>('getVoices'));
+    final List<String> voices =
+        List<String>.from(await _channel.invokeMethod<dynamic>('getVoices'));
     return voices;
   }
 
   /// [Future] which invokes the platform specific method for isLanguageAvailable
   /// Returns `true` or `false`
-  Future<dynamic> isLanguageAvailable(String language) => _channel.invokeMethod<dynamic>('isLanguageAvailable', <String, Object>{'language': language});
+  Future<dynamic> isLanguageAvailable(String language) =>
+      _channel.invokeMethod<dynamic>(
+          'isLanguageAvailable', <String, Object>{'language': language});
 
   /// [Future] which invokes the platform specific method for setSilence
   /// 0 means start the utterance immediately. If the value is greater than zero a silence period in milliseconds is set according to the parameter
-  Future<dynamic> setSilence(int timems) => _channel.invokeMethod<dynamic>('setSilence', timems ?? 0);
+  Future<dynamic> setSilence(int timems) =>
+      _channel.invokeMethod<dynamic>('setSilence', timems ?? 0);
 
   void setStartHandler(VoidCallback callback) {
     startHandler = callback;
