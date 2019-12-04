@@ -1,5 +1,5 @@
 group 'com.rdygo.flutter_tts_improved'
-version '1.0'
+version '1.0.1'
 
 buildscript {
     repositories {
