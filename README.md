@@ -17,7 +17,7 @@ My goal with this plugin is to allow everyone in flutter to track where the spee
   - [x] set speech pitch
   - [x] get voices
   - [x] set voice
-	- [x] #NEW track what word is currently being said (on all iOS 7+ and Android 26+)
+  - [x] #NEW track what word is currently being said (on all iOS 7+ and Android 26+)
 - [x] Android
   - [x] set Silence
 
