@@ -1,3 +1,7 @@
+## 1.0.2
+
+* Fully tested on multiple iOS and Android devices and emulators
+
 ## 0.0.2
 
 * Fixed issue with iOS config that prevented plugin from working on iOS devices
